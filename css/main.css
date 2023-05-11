@@ -24,7 +24,7 @@ body {
 
 section {
   min-height: 100vh;
-  padding: 100px 9%;
+  padding: 90px 9%;
 }
 
 .heading {
@@ -53,6 +53,13 @@ section {
   font-size: 25px;
   color: var(--txt-color);
   font-weight: bold;
+  cursor: pointer;
+}
+
+.header i.menu {
+  font-size: 25px;
+  color: var(--txt-color);
+  display: none;
   cursor: pointer;
 }
 
@@ -166,12 +173,16 @@ section {
   border-radius: 50px;
 }
 
+.about .about-content {
+  text-align: center;
+}
+
 .about-content h3 {
   font-size: 26px;
 }
 
 .about-content p {
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0 15px;
 }
 
@@ -289,4 +300,190 @@ section {
 
 .portfolio .portfolio-box:hover .portfolio-layer {
   transform: translateY(0);
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 700px;
+  margin: 10px auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--txt-color);
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+}
+
+.contact form .input-box input {
+  width: 345px;
+}
+
+.contact form textarea {
+  resize: none;
+  height: 200px;
+}
+
+.contact form .btn {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 20px 9%;
+  text-align: center;
+  background-color: var(--second-bg-color);
+}
+
+.footer p {
+  font-size: 20px;
+}
+
+.footer p span {
+  font-size: 20px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.scroll-to-top {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  z-index: 9999;
+}
+
+.scroll-to-top .up {
+  background: linear-gradient(to right, var(--main-color) 50%, #00eeffa3 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  transition: var(--main-transation);
+  cursor: pointer;
+}
+
+.scroll-to-top:hover .up {
+  background-position: left bottom;
+}
+
+.scroll-to-top .up::before {
+  font-family: "FontAwesome";
+  content: "\f077";
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 20px 3%;
+  }
+  .header i.menu {
+    display: block;
+  }
+  .header .nav-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 3%;
+    background-color: var(--bg-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  .header .nav-bar.active {
+    display: block;
+  }
+  .header .nav-bar li a {
+    display: block;
+    font-size: 20px;
+    margin: 30px 0;
+  }
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .home h3 {
+    font-size: 27px;
+  }
+  .home h1 {
+    font-size: 40px;
+  }
+  .home p {
+    font-size: 17px;
+  }
+  .home-img img {
+    height: 25vh;
+  }
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-img img {
+    height: 25vh;
+  }
+  .heading {
+    font-size: 40px;
+  }
+  .services-container .service-box i {
+    margin-bottom: 10px;
+  }
+  .service-box p {
+    margin: 10px 0;
+  }
+  .contact form .input-box input {
+    width: 100%;
+  }
+  .contact {
+    padding: 70px 3% 0;
+  }
+  .contact form .input-box input, .contact form textarea {
+    margin: 10px 0;
+  }
+  .footer p {
+    font-size: 24px;
+  }
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 20px 3%;
+  }
+  section {
+    padding: 90px 3% 30px;
+  }
+  .footer {
+    padding: 20px 3%;
+  }
 }
